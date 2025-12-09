@@ -12,6 +12,7 @@ from app.core.load_all_env import load_all_env
 # Routes Import
 from app.core.routes.file_route import router as file_v1_router
 from app.core.routes.meeting_route import router as meeting_v1_router
+from app.core.routes.task_route import router as task_v1_router
 
 app = FastAPI(title="Meeting Transcript Task Extractor", version="1.3", docs_url=None, redoc_url=None)
 
@@ -54,6 +55,7 @@ async def custom_swagger_ui_html(credentials: HTTPBasicCredentials = Depends(aut
 
 app.include_router(file_v1_router, prefix="/api/v1/file")
 app.include_router(meeting_v1_router, prefix="/api/v1/meeting")
+app.include_router(task_v1_router, prefix="/api/v1/task")
 
 
 @app.get("/")
