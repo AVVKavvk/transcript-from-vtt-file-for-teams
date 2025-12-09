@@ -1,0 +1,16 @@
+__pycache__
+
+venv
+.venv
+
+logs
+files
+txt
+tmp
+temp
+
+.env
+
+*.txt
+
+reset.py
